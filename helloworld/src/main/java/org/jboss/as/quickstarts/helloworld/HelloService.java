@@ -32,7 +32,7 @@ import java.util.jar.Manifest;
 public class HelloService {
 
     String createHelloMessage(String name) {
-        String return_string = "Hello " + name + "!\n System information: ";
+        String return_string = "Hello " + name + "!\n";
       //Manifest manifest = new Manifest(resources.nextElement().openStream());
       // check that this is your manifest and do what you need or get the next one                
         return return_string;
