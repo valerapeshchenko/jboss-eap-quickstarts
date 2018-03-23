@@ -40,8 +40,9 @@ public class HelloService {
         mf.read(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
 
         Attributes atts = mf.getMainAttributes();        
-        return_string += "Version: " + atts.getValue("Implementation-Version");
-        return_string += "Build: " + atts.getValue("Implementation-Build");
+        return_string += "Implementation-Version: " + atts.getValue("Implementation-Version");
+        return_string += "Implementation-Build: " + atts.getValue("Implementation-Build");
+        return_string += "Specification-Vendor: " + atts.getValue("Specification-Vendor");
         } catch(Exception e) {
       
     }
