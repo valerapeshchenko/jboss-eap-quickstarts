@@ -24,6 +24,8 @@ package org.jboss.as.quickstarts.helloworld;
  */
 
 import java.util.Enumeration;
+import java.net.*;
+import java.io.*;
 
 public class HelloService {
 
