@@ -22,6 +22,9 @@ package org.jboss.as.quickstarts.helloworld;
  * @author Pete Muir
  *
  */
+
+import java.util.Enumeration;
+
 public class HelloService {
 
     String createHelloMessage(String name) {
