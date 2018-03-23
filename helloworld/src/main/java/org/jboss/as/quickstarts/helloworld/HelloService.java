@@ -35,12 +35,16 @@ public class HelloService {
         String return_string = "Hello " + name + "!\n System information: ";
       //Manifest manifest = new Manifest(resources.nextElement().openStream());
       // check that this is your manifest and do what you need or get the next one        
+        try {
         Manifest mf = new Manifest();
         mf.read(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
 
         Attributes atts = mf.getMainAttributes();        
         return_string += "Version: " + atts.getValue("Implementation-Version");
         return_string += "Build: " + atts.getValue("Implementation-Build");
+        } catch(Exception e) {
+      
+    }
         return return_string;
     }
 
