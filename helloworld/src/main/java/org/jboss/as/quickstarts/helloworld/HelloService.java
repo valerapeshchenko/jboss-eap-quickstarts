@@ -44,6 +44,7 @@ public class HelloService {
         Attributes atts = mf.getMainAttributes();        
         return_string += "Version: " + atts.getValue("Implementation-Version");
         return_string += "Build: " + atts.getValue("Implementation-Build");
+        return return_string;
         
     } catch (IOException E) {
       // handle
