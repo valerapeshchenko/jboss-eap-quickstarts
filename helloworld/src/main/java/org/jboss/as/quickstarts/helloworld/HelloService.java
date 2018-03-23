@@ -44,7 +44,7 @@ public class HelloService {
         mf.read(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
 
         Attributes atts = mf.getMainAttributes();        
-        return_string += "Implementation-Version: " + atts.getValue("Implementation-Version")
+        return_string += "Implementation-Version: " + atts.getValue("Implementation-Version");
         } catch(Exception e) {      
     }        
         return return_string;
@@ -57,7 +57,7 @@ public class HelloService {
         mf.read(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
 
         Attributes atts = mf.getMainAttributes();        
-        return_string += "Specification-Vendor: " + atts.getValue("Specification-Vendor")
+        return_string += "Specification-Vendor: " + atts.getValue("Specification-Vendor");
         } catch(Exception e) {      
     }        
         return return_string;
