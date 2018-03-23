@@ -37,16 +37,40 @@ public class HelloService {
       // check that this is your manifest and do what you need or get the next one                
         return return_string;
     }
-    String createSysInformation() {
+    String createVerInformation() {
         String return_string = "";
         try {
         Manifest mf = new Manifest();
         mf.read(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
 
         Attributes atts = mf.getMainAttributes();        
-        return_string += "Implementation-Version: " + atts.getValue("Implementation-Version") + "\n";
-        return_string += "Implementation-Build: " + atts.getValue("Implementation-Build")+ "\n";
-        return_string += "Specification-Vendor: " + atts.getValue("Specification-Vendor");
+        return_string += "Implementation-Version: " + atts.getValue("Implementation-Version")
+        } catch(Exception e) {      
+    }        
+        return return_string;
+    }
+    
+    String createSpecInformation() {
+        String return_string = "";
+        try {
+        Manifest mf = new Manifest();
+        mf.read(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
+
+        Attributes atts = mf.getMainAttributes();        
+        return_string += "Specification-Vendor: " + atts.getValue("Specification-Vendor")
+        } catch(Exception e) {      
+    }        
+        return return_string;
+    }
+    
+    String createOsInformation() {
+        String return_string = "";
+        try {
+        Manifest mf = new Manifest();
+        mf.read(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
+
+        Attributes atts = mf.getMainAttributes();        
+        return_string += "Os-Version: " + atts.getValue("Os-Version");
         } catch(Exception e) {      
     }        
         return return_string;
