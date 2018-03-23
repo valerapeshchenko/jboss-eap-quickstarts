@@ -38,6 +38,7 @@ public class HelloService {
         return return_string;
     }
     String createSysInformation() {
+        String return_string = "";
         try {
         Manifest mf = new Manifest();
         mf.read(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
@@ -48,6 +49,7 @@ public class HelloService {
         return_string += "Specification-Vendor: " + atts.getValue("Specification-Vendor");
         } catch(Exception e) {      
     }        
+        return return_string;
     }
 
 }
