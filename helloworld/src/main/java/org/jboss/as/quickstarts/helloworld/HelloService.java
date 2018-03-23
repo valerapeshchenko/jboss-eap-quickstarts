@@ -34,7 +34,10 @@ public class HelloService {
     String createHelloMessage(String name) {
         String return_string = "Hello " + name + "!\n System information: ";
       //Manifest manifest = new Manifest(resources.nextElement().openStream());
-      // check that this is your manifest and do what you need or get the next one        
+      // check that this is your manifest and do what you need or get the next one                
+        return return_string;
+    }
+    String createSysInformation() {
         try {
         Manifest mf = new Manifest();
         mf.read(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
@@ -43,10 +46,8 @@ public class HelloService {
         return_string += "Implementation-Version: " + atts.getValue("Implementation-Version");
         return_string += "Implementation-Build: " + atts.getValue("Implementation-Build");
         return_string += "Specification-Vendor: " + atts.getValue("Specification-Vendor");
-        } catch(Exception e) {
-      
-    }
-        return return_string;
+        } catch(Exception e) {      
+    }        
     }
 
 }
