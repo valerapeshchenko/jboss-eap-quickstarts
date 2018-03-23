@@ -70,7 +70,7 @@ public class HelloService {
         mf.read(Thread.currentThread().getContextClassLoader().getResourceAsStream("META-INF/MANIFEST.MF"));
 
         Attributes atts = mf.getMainAttributes();        
-        return_string += "Os-Name: " + atts.getValue("Os-Name");
+        return_string += "Implementation-Vendor: " + atts.getValue("Implementation-Vendor");
         } catch(Exception e) {      
     }        
         return return_string;
